@@ -12,6 +12,7 @@ import { OrdersController } from './orders/orders.controller';
 import { OrdersService } from './orders/orders.service';
 import { ProductsService } from './products/products.service';
 import { ProductsModule } from './products/products.module';
+import { ProductsController } from './products/products.controller';
 
 @Module({
   imports: [
