@@ -4,6 +4,13 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { AuthModule } from './auth/auth.module';
 import { OrdersModule } from './orders/orders.module';
+import { SupabaseService } from './supabase/supabase.service';
+import { DataController } from './data/data.controller';
+import { ClientsController } from './clients/clients.controller';
+import { ClientsService } from './clients/clients.service';
+import { OrdersController } from './orders/orders.controller';
+import { OrdersService } from './orders/orders.service';
+import { ProductsController } from './products/products.controller';
 
 @Module({
   imports: [
@@ -13,7 +20,7 @@ import { OrdersModule } from './orders/orders.module';
     AuthModule,
     OrdersModule,
   ],
-  controllers: [AppController],
-  providers: [AppService],
+  controllers: [AppController, DataController,ClientsController,OrdersController, ProductsController],
+  providers: [AppService, SupabaseService,ClientsService,OrdersService],
 })
 export class AppModule {}
