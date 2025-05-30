@@ -7,7 +7,7 @@ export class OrdersController {
   constructor(private readonly ordersService: OrdersService) {}
 
   @Get()
-  @UseGuards(JwtAuthGuard)
+ // @UseGuards(JwtAuthGuard)
   async getAllOrders() {
     return this.ordersService.getAllOrders();
   }

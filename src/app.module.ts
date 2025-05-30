@@ -10,7 +10,8 @@ import { ClientsController } from './clients/clients.controller';
 import { ClientsService } from './clients/clients.service';
 import { OrdersController } from './orders/orders.controller';
 import { OrdersService } from './orders/orders.service';
-import { ProductsController } from './products/products.controller';
+import { ProductsService } from './products/products.service';
+import { ProductsModule } from './products/products.module';
 
 @Module({
   imports: [
@@ -19,8 +20,9 @@ import { ProductsController } from './products/products.controller';
     }),
     AuthModule,
     OrdersModule,
+    ProductsModule,
   ],
   controllers: [AppController, DataController,ClientsController,OrdersController, ProductsController],
-  providers: [AppService, SupabaseService,ClientsService,OrdersService],
+  providers: [AppService, SupabaseService,ClientsService,OrdersService, ProductsService],
 })
 export class AppModule {}
